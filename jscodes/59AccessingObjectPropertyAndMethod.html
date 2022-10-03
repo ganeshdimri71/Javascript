@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var fees = {
+        Rahul: 100,
+        Sumit: 200,
+      };
+      document.write(
+        "fees.Rahul " + fees.Rahul + " " + "fees.Sumit " + fees.Sumit + "<br>"
+      );
+      fees.Sonam = 600;
+      document.write(
+        "fees.Rahul " +
+          fees.Rahul +
+          " " +
+          "fees.Sumit " +
+          fees.Sumit +
+          " " +
+          "fees.Sonam " +
+          fees.Sonam
+      );
+      // fees['Sonam']=600;
+      console.log(fees);
+    </script>
+    <script>
+      var fees = {
+        Rahul: 100,
+        Sumit: 200,
+      };
+      document.write(
+        "fees.Rahul " + fees.Rahul + " " + "fees.Sumit " + fees.Sumit + "<br>"
+      );
+      fees.Sonam = 600;
+      document.write(
+        "fees.Rahul " +
+          fees.Rahul +
+          " " +
+          "fees.Sumit " +
+          fees.Sumit +
+          " " +
+          "fees.Sonam " +
+          fees.Sonam
+      );
+      fees.show = function () {};
+      // fees['Sonam']=600;
+      console.log(fees);
+    </script>
+  </body>
+</html>

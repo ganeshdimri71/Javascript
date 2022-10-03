@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div>
+    <h2>CLICK HERE TO GIVE THIS BOX FOCUS BEFORE PRESSING F5</h2>
+</div>
+        <script type="text/javascript">
+           function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+$(document).on("keydown", disableF5);
+
+// simply visual, let's you know when the correct iframe is selected
+$(window).on("focus", function(e) {
+    $("html, body").css({ background: "#FFF", color: "#000" })
+    .find("h2").html("THIS BOX NOW HAS FOCUS<br />F5 should not work.");
+})
+.on("blur", function(e) {
+    $("html, body").css({ background: "", color: "" })
+    .find("h2").html("CLICK HERE TO GIVE THIS BOX FOCUS BEFORE PRESSING F5");
+});
+
+        </script>
+    </body>
+</html>

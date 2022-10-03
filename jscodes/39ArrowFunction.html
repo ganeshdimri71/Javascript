@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Function Expression
+      var myfun1 = function show() {
+        document.write("Geeky Shows");
+      };
+      // Anonymous Function
+      var fun2 = function () {
+        document.write("Geeky Shows");
+      };
+      // Arow Function
+      var myfun = () => {
+        document.write("Geeky Shows");
+      };
+      myfun();
+    </script>
+    <script>
+      myfun();
+      var myfun = () => {
+        document.write("Geeky Shows");
+      };
+    </script>
+    <script>
+      var myfun = (a) => {
+        document.write(a + "<br>");
+      };
+      myfun(10);
+      // Paranthesis is not required when there is only on parameter
+      var myfun1 = (a) => {
+        document.write(a + "<br>");
+      };
+      myfun(10);
+      // Paranthesis is  required when there is more then  one parameter
+      var myfun2 = (a, b) => {
+        document.write(a + " " + b);
+      };
+      myfun2(10, 20);
+    </script>
+    <script>
+      var myfun = (a) => {
+        document.write("myfun " + a + "<br>");
+      };
+      myfun(10);
+      // Paranthesis is not required when there is only on parameter
+      var myfun1 = (a) => {
+        document.write("myfun1 " + a + "<br>");
+      };
+      myfun(10);
+      // Paranthesis is  required when there is more then  one parameter
+      var myfun2 = (a, b) => {
+        document.write("myfun2 " + a + " " + b);
+        document.write("<br>");
+      };
+      myfun2(10, 20);
+      var myfun3 = (a) => {
+        document.write("myfun3 " + "Geeky Shows" + "<br>");
+      };
+      myfun3();
+      // Arrow function with parameter
+      var myfun4 = (a, b = 20) => {
+        document.write("myfun4 " + a + " " + b);
+        document.write("<br>");
+      };
+      myfun4(10);
+      var myfun5 = (a, ...args) => {
+        document.write("myfun5 " + a + " " + args);
+        document.write("<br>");
+      };
+      myfun5(10, 20, 30, 40, 50, 60);
+      // Arrow function
+      var myfun6 = (a) => document.write("myfun6 " + a + "<br>");
+      myfun6(10);
+      var myfun7 = (a) => document.write("myfun7 " + a + "<br>");
+      document.write("Geeky Shows");
+      document.write("<br>");
+      myfun7(10);
+      // Arrow function with two line of code
+      var myfun8 = (a) => {
+        document.write("myfun8 " + a + "<br>");
+        document.write("Geeky Shows");
+      };
+      myfun8(10);
+    </script>
+    <script>
+      var myfun1 = function show(a) {
+        return a;
+      };
+      // Anonymous Function
+      var myfun2 = function (b) {
+        return b;
+      };
+      // Arrow Function
+      var myfun = (c) => "myfun " + c + "<br>";
+      document.write(myfun(10));
+      // Dont write culry
+      var myfun1 = (c) => {
+        c;
+      };
+      document.write(myfun1(10));
+      document.write("<br>");
+      // if u want to use curly
+      var myfun2 = (c) => {
+        return "myfun2 " + c + "<br>";
+      };
+      document.write(myfun2(10));
+      // Arrow Function without curly
+      var myfun3 = (a, b) => "myfun3 " + (a + b) + "<br>";
+      document.write(myfun3(10, 20));
+      // Arrow Function with curly
+      var myfun4 = (a, b) => {
+        return "myfun4 " + (a + b) + "<br>";
+      };
+      document.write(myfun4(10, 20));
+    </script>
+  </body>
+</html>

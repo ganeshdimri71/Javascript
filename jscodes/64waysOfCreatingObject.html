@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Object Literal
+        var fees = {};
+        fees['Rahul'] = 200;
+        // Object Literal Declaration and Initialization
+        var fees = {
+            Rahul: 100,
+            Sumit: 200
+        }
+        // Object Constructor
+        var fees = new Object();
+        // Factory Function
+        function mobile() {
+            return {
+                model: 'Galaxy'
+            }
+        }
+        var samsung = mobile()
+        var lg = mobile()
+        // Constructor
+        function Mobile() {
+            this.model = 'Galaxy';
+        }
+        var samsung = new Mobile()
+        var lg = new Mobile()
+        // Constructor Function
+       var Mobile =  function() {
+            this.model = 'Galaxy';
+        }
+        var samsung = new Mobile()
+        var lg = new Mobile()
+    </script>
+</body>
+</html>

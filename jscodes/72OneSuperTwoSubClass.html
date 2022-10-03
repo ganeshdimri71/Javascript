@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Super Class
+        var Mobile = function () {
+        }
+        // Prototype Method
+        Mobile.prototype.getModel = function () {
+            return this.model;
+        }
+        //  Sub Class
+        var Samsung = function (model, price) {
+            this.model = model;
+            this.price = price;
+        }
+        // Sub Class
+        var Lenevo = function (model) {
+            this.model = model;
+        }
+        // Inheritance 
+        Samsung.prototype = Object.create(Mobile.prototype)
+        Samsung.prototype.constructor = Samsung
+        Lenevo.prototype = Object.create(Mobile.prototype)
+        Lenevo.prototype.constructor = Lenevo;
+        var galaxy = new Samsung('Galaxy', 3000);
+        var phab2 = new Lenevo('Phab 2');
+        console.log(galaxy.getModel())
+        console.log(phab2.getModel())
+        // var galaxy = new Samsung('Galaxy',3000);
+    </script>
+        <script>
+        // Super Class
+        var Mobile = function () {
+        }
+        // Prototype Method
+        Mobile.prototype.getModel = function () {
+            return this.model;
+        }
+        //  Sub Class
+        var Samsung = function (model, price) {
+            this.model = model;
+            this.price = price;
+        }
+        // Sub Class
+        var Lenevo = function (model) {
+            this.model = model;
+        }
+        // Inheritance 
+        Samsung.prototype = Object.create(Mobile.prototype)
+        Samsung.prototype.constructor = Samsung
+        Lenevo.prototype = Object.create(Mobile.prototype)
+        Lenevo.prototype.constructor = Lenevo;
+        Samsung.prototype.getPrice = function () {
+            return this.price;
+        }
+        var galaxy = new Samsung('Galaxy', 3000);
+        var phab2 = new Lenevo('Phab 2');
+        console.log(galaxy.getModel())
+        console.log(phab2.getModel())
+        console.log(galaxy.getPrice())
+        // var galaxy = new Samsung('Galaxy',3000);
+    </script>
+       <script>
+        // Function for Inhertitance
+        function extend(child, parent) {
+            child.prototype = Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+        // Super Class
+        var Mobile = function () {
+        }
+        // Prototype Method
+        Mobile.prototype.getModel = function () {
+            return this.model;
+        }
+        //  Sub Class
+        var Samsung = function (model, price) {
+            this.model = model;
+            this.price = price;
+        }
+        // Sub Class
+        var Lenevo = function (model) {
+            this.model = model;
+        }
+        // Inheritance 
+        extend(Samsung, Mobile)
+        extend(Lenevo, Mobile)
+        Samsung.prototype.getPrice = function () {
+            return this.price;
+        }
+        var galaxy = new Samsung('Galaxy', 3000);
+        var phab2 = new Lenevo('Phab 2');
+        console.log(galaxy.getModel())
+        console.log(phab2.getModel())
+        console.log(galaxy.getPrice())
+        // var galaxy = new Samsung('Galaxy',3000);
+    </script>
+     <script>
+        var Mobile = function (model) {
+            this.model = model;
+        }
+        Mobile.prototype.getModel = function () {
+            return this.model
+        }
+        var Samsung = function (price) {
+            this.price = price;
+        }
+        // Inheritance
+        Samsung.prototype = Object.create(Mobile.prototype)
+        Samsung.prototype.constructor = Samsung;
+        var galaxy = new Samsung(3000);
+        console.log(galaxy.getModel())
+    </script>
+      <script>
+        var Mobile = function (model) {
+            this.model = model;
+        }
+        Mobile.prototype.getModel = function () {
+            return this.model
+        }
+        var Samsung = function (model, price) {
+            Mobile.call(this, model)
+            this.price = price;
+        }
+        // Inheritance
+        Samsung.prototype = Object.create(Mobile.prototype)
+        Samsung.prototype.constructor = Samsung;
+        var galaxy = new Samsung('Galaxy', 3000);
+        console.log(galaxy.getModel())
+        console.log(galaxy.model)
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Operator</title>
+  </head>
+  <body>
+    <script>
+      function sum(name, ...args) {
+        document.write(`Hello ${name} : <br>`);
+        let sum = 0;
+        for (let i in args) {
+          sum += args[i];
+        }
+        document.write("sum: " + sum + "<br>");
+      }
+      var arr = [10, 20, 30];
+      sum("Yahoo Baba", arr);
+      document.write("*************" + "<br>");
+      function sumOne(name, ...args) {
+        document.write(`Hello ${name} : <br>`);
+        let sum = 0;
+        for (let i in args) {
+          sum += args[i];
+        }
+        document.write("sum: " + sum + "<br>");
+      }
+      var arr = [10, 20, 30, 40];
+      sumOne("Yahoo Baba", ...arr);
+      document.write("*************" + "<br>");
+      var arr1 = [10, 20, 30, 40];
+      console.log("arr1: ", arr1);
+      console.log("...arr1: ", ...arr1);
+      console.log("[...arr1]: ", [...arr1]);
+      var arr3 = [10, 20, 30, 40];
+      var arr4 = arr3;
+      console.log("arr3: ", arr3, " arr4: ", arr4);
+      arr3.push(50);
+      console.log("arr3: ", arr3, " arr4: ", arr4);
+      var arr5 = [10, 20, 30, 40];
+      var arr6 = arr5;
+      console.log("arr5: ", arr5, " arr6: ", arr6);
+      arr5.push(50);
+      console.log("arr5: ", arr5, " arr6: ", arr6);
+      var arr7 = [10, 20, 30, 40];
+      var arr8 = [50, 60];
+      console.log("arr7: ", arr7, " arr8: ", arr8);
+      var arr9 = arr7.concat(arr8);
+      console.log("arr7: ", arr7, " arr8: ", arr8, " arr9: ", arr9);
+      var arr10 = [10, 20, 30, 40];
+      var arr11 = [50, 60];
+      console.log("arr10: ", arr10, " arr11: ", arr11);
+      var arr12 = [5, ...arr10, ...arr11, 65];
+      console.log("arr10: ", arr10, " arr11: ", arr11, " arr12: ", arr12);
+    </script>
+    <script>
+      var obj1 = {
+        name: "Yahoo Baba",
+      };
+      var obj2 = {
+        age: 25,
+      };
+      var obj3 = {
+        ...obj1,
+        ...obj2,
+      };
+      console.log("obj3: ", obj3);
+    </script>
+  </body>
+</html>

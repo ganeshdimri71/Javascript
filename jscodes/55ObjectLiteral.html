@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declaration Of Object
+        var fees = {};
+        fees['Rahul'] = 100;
+        fees['Sumit'] = 200;
+        fees['Rohan'] = 300;
+        fees.Sonam = 400;
+        fees.Rani = 500;
+        fees.Ganesh = 600;
+        fees["Super Man"] = 700;
+        document.write(fees['Rahul'] + '<br>')
+        document.write(fees['Sumit'] + '<br>')
+        document.write(fees['Rohan'] + '<br>')
+        document.write(fees.Sonam + '<br>')
+        document.write(fees.Rani + '<br>')
+        document.write(fees.Ganesh + '<br>')
+        document.write(fees["Super Man"] + '<br>')
+    </script>
+     <script>
+        var fees = {
+            Rahul: 100,
+            Sumit: 200,
+            Rohan: 300,
+            "Super Man": 400
+        }
+        document.write("fees['Rahul'] " + fees['Rahul'] + '<br>')
+        document.write("fees['Sumit'] " + fees['Sumit'] + '<br>')
+        document.write("fees['Rohan'] " + fees['Rohan'] + '<br>')
+        document.write("fees['Super Man'] " + fees["Super Man"] + '<br>')
+        document.write("fees.Rahul  " + fees.Rahul + '<br>')
+        document.write("fees.Sumit " + fees.Sumit + '<br>')
+        document.write("fees.Rohan " + fees.Rohan + '<br>')
+    </script>
+</body>
+</html>

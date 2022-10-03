@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = ["Yahoo Baba", 25, "Delhi"]
+        let [name, age, city] = user;
+        console.log("name: ", name)
+        console.log("age: ", age)
+        console.log("city: ", city)
+        console.log('**************')
+        let user1 = ["Yahoo Baba", 25]
+        let [name1, age1, city1] = user1;
+        console.log("name1: ", name1)
+        console.log("age1: ", age1)
+        console.log("city1: ", city1)
+        console.log('**************')
+        let user2 = [, , "Delhi"]
+        let [name2, age2, city2] = user2;
+        console.log("name2: ", name2)
+        console.log("age2: ", age2)
+        console.log("city2: ", city2)
+        console.log('**************')
+        let user3 = ["Yahoo Baba", , "Delhi"]
+        let [name3, age3 = 20, city3] = user3;
+        console.log("name3: ", name3)
+        console.log("age3: ", age3)
+        console.log("city3: ", city3)
+        console.log('**************')
+        let user4 = ["Yahoo Baba", 22, "Delhi", ["Male", 25000]]
+        let [name4, age4 = 20, city4, [gender, salary]] = user4;
+        console.log("name4: ", name4)
+        console.log("age4: ", age4)
+        console.log("city4: ", city4)
+        console.log("gender: ", gender)
+        console.log("salary: ", salary)
+        console.log('**************')
+        let user5 = ["Yahoo Baba", 22, "Delhi"]
+        let [name5, ...args] = user5;
+        console.log("name5: ", name5)
+        console.log("args: ", args)
+        console.log('**************')
+        function user6([name6, age6 = 20, city6]) {
+            console.log("name6: ", name6)
+            console.log("age6: ", age6)
+            console.log("city6: ", city6)
+        }
+        user6(["Yahoo Baba", 22, "Delhi"])
+        console.log('**************')
+        function user7() {
+            return ["Yahoo Baba", 22, "Delhi"]
+        }
+        let [name7, age7 = 20, city7] = user7()
+        console.log("name7: ", name7)
+        console.log("age7: ", age7)
+        console.log("city7: ", city7)
+        console.log('**************')
+    </script>
+</body>
+</html>

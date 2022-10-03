@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fees = new Object();
+        fees['Rahul'] = 100;
+        fees['Sumit'] = 200;
+        fees['Rohan'] = 300;
+        fees.Sonam = 400;
+        fees.Sohan = 500;
+        fees.Rani = 600;
+        fees['total'] = function () {
+            return (100 + 200)
+        }
+        document.write("fees['Rahul'] " + fees['Rahul'] + '<br>')
+        document.write("fees.Rahul " + fees.Rahul + '<br>')
+        document.write("fees.['total'] " + fees['total']() + '<br>')
+        document.write("fees.total() " + fees.total() + '<br>')
+    </script>
+</body>
+</html>

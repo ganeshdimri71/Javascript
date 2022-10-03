@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function for Inhertitance
+        function extend(child, parent) {
+            child.prototype = Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+        // Super Class
+        var Mobile = function () {
+        }
+        // Prototype Method
+        Mobile.prototype.show = function () {
+            return "Super Class Show";
+        }
+        //  Sub Class
+        var Samsung = function () {}
+        // Inheritance 
+        extend(Samsung, Mobile)
+        var sam = new Samsung();
+        document.write("sam.show() " + sam.show())
+    </script>
+     <script>
+        // Function for Inhertitance
+        function extend(child, parent) {
+            child.prototype = Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+        // Super Class
+        var Mobile = function () {
+        }
+        // Prototype Method
+        Mobile.prototype.show = function () {
+            return "Super Class Show";
+        }
+        //  Sub Class
+        var Samsung = function () {}
+
+        // Inheritance 
+        extend(Samsung, Mobile)
+        Samsung.prototype.show = function () {
+            return "Sub Class Show";
+        }
+        var sam = new Samsung();
+        document.write("sam.show() " + sam.show())
+    </script>
+        <script>
+        // Function for Inhertitance
+        function extend(child, parent) {
+            child.prototype = Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+        // Super Class
+        var Mobile = function () {
+        }
+        // Prototype Method
+        Mobile.prototype.show = function () {
+            return "Super Class Show";
+        }
+        //  Sub Class
+        var Samsung = function () {}
+
+        // Inheritance 
+        extend(Samsung, Mobile)
+        Samsung.prototype.show = function () {
+            return "Sub Class Show";
+        }
+        var sam = new Samsung();
+        var mob = new Mobile();
+        document.write("sam.show() " + sam.show() + '<br>')
+        document.write("mob.show() " + mob.show() + '<br>')
+    </script>
+</body>
+</html>

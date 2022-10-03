@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Mobile(model_no) {
+        this.model = model_no;
+        this.price = function () {
+          document.write(
+            "this.model  " + this.model + " Price Rs.3000" + "<br>"
+          );
+        };
+      }
+      var samsung = new Mobile("Galaxy");
+      var nokia = new Mobile("3310");
+      if (typeof nokia.memory !== "undefined") {
+        document.write("Available");
+      } else {
+        document.write("Dosen'nt Exist");
+      }
+    </script>
+    <script>
+      function Mobile(model_no) {
+        this.model = model_no;
+        this.memory = 4;
+      }
+      var samsung = new Mobile("Galaxy");
+      var nokia = new Mobile("3310");
+      if ("memory" in nokia) {
+        document.write("Available");
+      } else {
+        document.write("Dosen'nt Exist");
+      }
+    </script>
+  </body>
+</html>

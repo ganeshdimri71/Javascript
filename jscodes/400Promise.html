@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        let complete = true;
+        let prom = new Promise(function (resolve, reject) {
+            if (complete) {
+                resolve("Here is the Success")
+            } else {
+                reject("Here is the Failure")
+            }
+        })
+        console.log("prom: ", prom)
+        console.log('***********')
+        function promOne(completeOne) {
+            return new Promise(function (resolve, reject) {
+                if (completeOne) {
+                    resolve("Here is the Success")
+                } else {
+                    reject("Here is the Failure")
+                }
+            })
+        }
+        console.log("promOne: ", promOne(true))
+        console.log('***********')
+        function promTwo(completeTwo) {
+            return new Promise(function (resolve, reject) {
+                if (completeTwo) {
+                    resolve("Here is the Success")
+                } else {
+                    reject("Here is the Failure")
+                }
+            })
+        }
+        let onfullfilment = (result) => {
+            console.log("result:", result)
+        }
+        let onrejection = (error) => {
+            console.log("error:", error)
+            console.log('***********')
+        }
+        promTwo(true).then(onfullfilment);
+        promTwo(true).then(onrejection);
+        function promThree(completeThree) {
+            return new Promise(function (resolve, reject) {
+                if (completeThree) {
+                    resolve("Here is the Success")
+                } else {
+                    reject("Here is the Failure")
+                }
+            })
+        }
+        let onfullfilmentThree = (result) => {
+            console.log("result:", result)
+            console.log('***********')
+        }
+        let onrejectionThree = (error) => {
+            console.log("error:", error)
+            console.log('***********')
+        }
+        promThree(true).then(onfullfilmentThree);
+        promThree(true).catch(onrejectionThree);
+        function promFour(completFour) {
+            console.log('Fetching Data Please wait of promFour')
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    if (completFour) {
+                        resolve("Here is the Success")
+                    } else {
+                        reject("Here is the Failure")
+                    }
+                }, 1000)
+            })
+        }
+        let onfullfilmentFour = (result) => {
+            console.log("result:", result)
+            console.log('***********')
+        }
+        let onrejectionFour = (error) => {
+            console.log("error:", error)
+            console.log('***********')
+        }
+        promFour(true).then(onfullfilmentFour);
+        promFour(true).catch(onrejectionFour);
+        function promFive(completFive) {
+            console.log('Fetching Data Please wait of promFive')
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    if (completFive) {
+                        resolve("Here is the Success")
+                    } else {
+                        reject("Here is the Failure")
+                    }
+                }, 1000)
+            })
+        }
+        let onfullfilmentFive = (result) => {
+            console.log("result:", result)
+            console.log('***********')
+        }
+        let onrejectionFive = (error) => {
+            console.log("error:", error)
+            console.log('***********')
+        }
+        promFive(false).then(onfullfilmentFive);
+        promFive(false).catch(onrejectionFive);
+        function promSix(completSix) {
+            console.log('Fetching Data Please wait of promSix')
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    if (completSix) {
+                        resolve("Here is the Success")
+                    } else {
+                        reject("Here is the Failure")
+                    }
+                }, 1000)
+            })
+        }
+        promSix(true).then((result) => {
+            console.log("result:", result)
+            console.log('***********')
+        }).catch((error) => {
+            console.log("error:", error)
+            console.log('***********')
+        });
+        function promSeven(a, b) {
+            console.log('Fetching Data Please wait of promSeven')
+            let c = a / b
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    if (c) {
+                        resolve(`Your answer is : ${c}`)
+                    } else {
+                        reject("Failed to calculate")
+                    }
+                }, 2000)
+            })
+        }
+        promSeven(5, 2).then((result) => {
+            console.log("result:", result)
+            console.log('***********')
+        }).catch((error) => {
+            console.log("error:", error)
+            console.log('***********')
+        });
+        function promEight(a, b) {
+            console.log('Fetching Data Please wait of promEight')
+            let c = a / b
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    if (a, b) {
+                        resolve(`Your answer is : ${c}`)
+                    } else {
+                        reject("Failed to calculate")
+                    }
+                }, 2000)
+            })
+        }
+        promEight(5, 0).then((result) => {
+            console.log("result:", result)
+            console.log('***********')
+        }).catch((error) => {
+            console.log("error:", error)
+            console.log('***********')
+        });
+        function promNine() {
+            console.log('Fetching Data Please wait')
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    $.get("https://jsonplaceholder.typicode.com/posts", function (data) {
+                        resolve(data)
+                    }).fail(err => {
+                        reject('Failed to load json')
+                    })
+                }, 2000)
+            })
+        }
+        promNine(5, 0).then((result) => {
+            console.log("result:", result)
+            console.log('***********')
+        }).catch((error) => {
+            console.log("error:", error)
+            console.log('***********')
+        });
+    </script>
+</body>
+</html>

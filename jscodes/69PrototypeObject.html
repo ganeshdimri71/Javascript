@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Object.prototype
+      console.log("Object.prototype ", Object.prototype);
+      var b = {};
+      console.log("Object.getPrototypeOf(b)", Object.getPrototypeOf(b));
+      console.log(
+        "Object.getPrototypeOf(Object.prototype)",
+        Object.getPrototypeOf(Object.prototype)
+      );
+    </script>
+    <script>
+      var b1 = new Object();
+      console.log("Object.getPrototypeOf(b1) ", Object.getPrototypeOf(b1));
+      console.log(
+        "Object.getPrototypeOf(Object.prototype) ",
+        Object.getPrototypeOf(Object.prototype)
+      );
+    </script>
+    <script>
+      var b1 = new Array();
+      console.log("Object.getPrototypeOf(b1) ", Object.getPrototypeOf(b1));
+      console.log(
+        " Object.getPrototypeOf(Array.prototype) ",
+        Object.getPrototypeOf(Array.prototype)
+      );
+      console.log(
+        "Object.getPrototypeOf(Object.prototype) ",
+        Object.getPrototypeOf(Object.prototype)
+      );
+    </script>
+    dy>
+    <script>
+      var b1 = new String();
+      console.log("Object.getPrototypeOf(b1) ", Object.getPrototypeOf(b1));
+      console.log(
+        " Object.getPrototypeOf(Array.prototype) ",
+        Object.getPrototypeOf(String.prototype)
+      );
+      console.log(
+        "Object.getPrototypeOf(Object.prototype) ",
+        Object.getPrototypeOf(Object.prototype)
+      );
+    </script>
+  </body>
+</html>
